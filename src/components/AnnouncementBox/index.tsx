@@ -3,7 +3,6 @@ import style from "./AnnouncementBox.module.css";
 import { useEffect, useState } from "react";
 import dayjs from "../../utils/custom-dayjs";
 import CardItem from "../CardItem";
-import FlexBox from "../FlexBox";
 import FilterBox from "../FilterBox";
 
 export type AnnouncementData = {
@@ -47,7 +46,11 @@ export default function AnnouncementBox({ data }: AnnouncementBoxPropType) {
           <CardItem
             key={id}
             hasPin
-            metaText={dayjs(announcement.time).fromNow()}
+            metaText={
+              dayjs(announcement.date).fromNow() +
+              ", " +
+              dayjs(announcement.time).format("h:mm A")
+            }
           >
             {announcement.text}
           </CardItem>

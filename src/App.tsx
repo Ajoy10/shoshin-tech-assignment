@@ -3,6 +3,7 @@ import AnnouncementBox, {
   AnnouncementData,
 } from "./components/AnnouncementBox";
 import FlexBox from "./components/FlexBox";
+import ScheduleBox, { ScheduleData } from "./components/ScheduleBox";
 import StatCard from "./components/StatCard";
 
 function App() {
@@ -39,6 +40,63 @@ function App() {
     },
   ];
 
+  const schedules: ScheduleData[] = [
+    {
+      date: new Date("2024-10-01"),
+      time: new Date("2024-10-01T09:00:00"),
+      text: "Product Release Date",
+      priority: true,
+    },
+    {
+      date: new Date("2024-10-01"),
+      time: new Date("2024-10-01T14:30:00"),
+      text: "Team Lunch",
+      priority: false,
+    },
+    {
+      date: new Date("2024-10-02"),
+      time: new Date("2024-10-02T11:00:00"),
+      text: "Quarterly Strategy Meeting",
+      priority: true,
+    },
+    {
+      date: new Date("2024-10-02"),
+      time: new Date("2024-10-02T15:00:00"),
+      text: "Client Presentation Prep",
+      priority: true,
+    },
+    {
+      date: new Date("2024-10-03"),
+      time: new Date("2024-10-03T10:00:00"),
+      text: "Team Building Workshop",
+      priority: false,
+    },
+    {
+      date: new Date("2024-10-03"),
+      time: new Date("2024-10-03T13:30:00"),
+      text: "Office Health and Safety Training",
+      priority: false,
+    },
+    {
+      date: new Date("2024-10-04"),
+      time: new Date("2024-10-04T09:00:00"),
+      text: "All-Hands Meeting",
+      priority: true,
+    },
+    {
+      date: new Date("2024-10-04"),
+      time: new Date("2024-10-04T12:00:00"),
+      text: "Project Kickoff",
+      priority: false,
+    },
+    {
+      date: new Date("2024-10-04"),
+      time: new Date("2024-10-04T15:00:00"),
+      text: "Feedback Session",
+      priority: true,
+    },
+  ];
+
   return (
     <>
       <FlexBox direction="vertical">
@@ -62,7 +120,10 @@ function App() {
             description="4 Department"
           />
         </FlexBox>
-        <AnnouncementBox data={announcements} maxAnnouncementToShow={2} />
+        <AnnouncementBox data={announcements} />
+        <FlexBox>
+          <ScheduleBox data={schedules} />
+        </FlexBox>
       </FlexBox>
     </>
   );

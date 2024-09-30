@@ -1,0 +1,12 @@
+.sb_content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sb_sub {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
