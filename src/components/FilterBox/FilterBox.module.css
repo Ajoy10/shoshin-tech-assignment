@@ -1,0 +1,50 @@
+.filter_box {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 18px;
+  padding-bottom: 0px;
+}
+
+.filter_box_header {
+  justify-content: space-between;
+}
+
+.filter select {
+  border: 1px solid #efefef;
+  background: unset;
+  padding: 4px 6px;
+  color: #686868;
+  border-radius: 4px;
+
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+
+.filter select option {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+
+.filter_content {
+  overflow-y: auto;
+  min-height: 30vh;
+  max-height: 30vh;
+}
+
+.filter_see_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  padding: 8px 0px;
+}
+
+.filter_see_more a {
+  color: #ff5151;
+  text-align: center;
+}

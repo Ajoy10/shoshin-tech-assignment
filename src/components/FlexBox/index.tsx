@@ -5,6 +5,7 @@ type FlexBoxPropTypes = {
   direction?: "vertical" | "horizontal";
   gap?: number;
   style?: React.CSSProperties;
+  className?: string;
 };
 
 export default function FlexBox({
@@ -12,9 +13,11 @@ export default function FlexBox({
   direction = "horizontal",
   gap = 16,
   style = {},
+  className = "",
 }: FlexBoxPropTypes) {
   return (
     <div
+      className={className}
       style={{
         display: "flex",
         flexDirection: direction == "horizontal" ? "row" : "column",

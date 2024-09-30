@@ -1,35 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import AnnouncementBox, {
+  AnnouncementData,
+} from "./components/AnnouncementBox";
+import FlexBox from "./components/FlexBox";
+import StatCard from "./components/StatCard";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const announcements: AnnouncementData[] = [
+    {
+      date: new Date("2024-09-23"),
+      time: new Date("2024-09-23T10:00:00"),
+      text: "New Product Launch",
+    },
+    {
+      date: new Date("2024-09-23"),
+      time: new Date("2024-09-23T14:30:00"),
+      text: "Monthly Team Meeting",
+    },
+    {
+      date: new Date("2024-09-25"),
+      time: new Date("2024-09-25T09:15:00"),
+      text: "Company Picnic!",
+    },
+    {
+      date: new Date("2024-09-25"),
+      time: new Date("2024-09-25T11:00:00"),
+      text: "Quarterly Review",
+    },
+    {
+      date: new Date("2024-09-25"),
+      time: new Date("2024-09-25T16:45:00"),
+      text: "Office Closure Notice",
+    },
+    {
+      date: new Date("2024-09-27"),
+      time: new Date("2024-09-27T08:30:00"),
+      text: "New Team Member Introduction",
+    },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <FlexBox direction="vertical">
+        <FlexBox>
+          <StatCard
+            theme="orange"
+            title="Available Position"
+            value={24}
+            description="4 Urgently needed"
+          />
+          <StatCard
+            theme="blue"
+            title="Job Open"
+            value={10}
+            description="4 Active Hiring"
+          />
+          <StatCard
+            theme="pink"
+            title="New Employees"
+            value={24}
+            description="4 Department"
+          />
+        </FlexBox>
+        <AnnouncementBox data={announcements} maxAnnouncementToShow={2} />
+      </FlexBox>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
