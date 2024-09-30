@@ -130,7 +130,10 @@ function App() {
 
             <AnnouncementBox data={announcements} />
           </FlexBox>
-          <FlexBox direction="vertical">
+          <FlexBox
+            direction="vertical"
+            style={{ flex: 1, minWidth: "400px", maxWidth: "600px" }}
+          >
             <div id="box-2">Yet to create</div>
             <ScheduleBox data={schedules} />
           </FlexBox>
