@@ -35,7 +35,11 @@ export default function FilterBox({
   }, [onFilterChange, selectedFilter]);
 
   return (
-    <FlexBox className={style.filter_box} direction="vertical">
+    <FlexBox
+      className={style.filter_box}
+      direction="vertical"
+      style={{ flexWrap: "nowrap" }}
+    >
       <FlexBox className={style.filter_box_header}>
         <div className="component-title">{title}</div>
         <div className={style.filter}>

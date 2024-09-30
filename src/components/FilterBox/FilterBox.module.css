@@ -32,8 +32,8 @@
 
 .filter_content {
   overflow-y: auto;
-  min-height: 30vh;
-  max-height: 30vh;
+  min-height: 60%;
+  max-height: 60%;
 }
 
 .filter_see_more {

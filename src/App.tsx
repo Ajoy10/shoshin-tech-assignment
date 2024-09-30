@@ -99,32 +99,43 @@ function App() {
 
   return (
     <>
-      <FlexBox direction="vertical">
+      <main>
+        <h1>Dashboard</h1>
         <FlexBox>
-          <StatCard
-            theme="orange"
-            title="Available Position"
-            value={24}
-            description="4 Urgently needed"
-          />
-          <StatCard
-            theme="blue"
-            title="Job Open"
-            value={10}
-            description="4 Active Hiring"
-          />
-          <StatCard
-            theme="pink"
-            title="New Employees"
-            value={24}
-            description="4 Department"
-          />
+          <FlexBox direction="vertical">
+            <FlexBox>
+              <StatCard
+                theme="orange"
+                title="Available Position"
+                value={24}
+                description="4 Urgently needed"
+              />
+              <StatCard
+                theme="blue"
+                title="Job Open"
+                value={10}
+                description="4 Active Hiring"
+              />
+              <StatCard
+                theme="pink"
+                title="New Employees"
+                value={24}
+                description="4 Department"
+              />
+            </FlexBox>
+            <div id="box-1">
+              <div className="item">Yet to create</div>
+              <div className="item">Yet to create</div>
+            </div>
+
+            <AnnouncementBox data={announcements} />
+          </FlexBox>
+          <FlexBox direction="vertical">
+            <div id="box-2">Yet to create</div>
+            <ScheduleBox data={schedules} />
+          </FlexBox>
         </FlexBox>
-        <AnnouncementBox data={announcements} />
-        <FlexBox>
-          <ScheduleBox data={schedules} />
-        </FlexBox>
-      </FlexBox>
+      </main>
     </>
   );
 }
